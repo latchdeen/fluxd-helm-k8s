@@ -4,17 +4,17 @@
 
 replicaCount: 3
 
-# image:
-#   repository: nginx
-#   pullPolicy: IfNotPresent
-#   # Overrides the image tag whose default is the chart appVersion.
-#   tag: ""
-
 image:
-  repository: webserver
-  pullPolicy: Never
+  repository: nginx
+  pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  tag: ""
+
+# image:
+#   repository: webserver
+#   pullPolicy: Never
+#   # Overrides the image tag whose default is the chart appVersion.
+#   tag: "latest"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -42,13 +42,13 @@ securityContext: {}
   # runAsNonRoot: true
   # runAsUser: 1000
 
-# service:
-#   type: ClusterIP
-#   port: 80
-
 service:
-  type: NodePort
+  type: ClusterIP
   port: 80
+
+# service:
+#   type: NodePort
+#   port: 80
 
 
 ingress:
