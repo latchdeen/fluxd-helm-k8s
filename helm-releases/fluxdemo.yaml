@@ -10,5 +10,5 @@ spec:
   targetNamespace: default
   chart:
     git: https://github.com/latchdeen/fluxd-helm-k8s.git
-    path: /web
+    path: web
     ref: master
