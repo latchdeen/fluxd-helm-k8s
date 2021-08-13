@@ -7,7 +7,7 @@ metadata:
     fluxcd.io/automated: "true"
 spec:
   releaseName: web
-  #targetNamespace: fluxcd-demo
+  targetNamespace: default
   chart:
     git: git@github.com:latchdeen/fluxd-helm-k8s.git
     path: fluxd-helm-k8s/web/
