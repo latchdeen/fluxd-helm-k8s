@@ -1,7 +1,7 @@
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
-  name: fluxcd
+  name: web
   namespace: default
   annotations:
     fluxcd.io/automated: "true"
@@ -9,6 +9,6 @@ spec:
   releaseName: web
   targetNamespace: default
   chart:
-    git: git@github.com:latchdeen/fluxd-helm-k8s.git
+    git: https://github.com/latchdeen/fluxd-helm-k8s.git
     path: fluxd-helm-k8s/web
     ref: master
